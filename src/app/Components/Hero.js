@@ -5,17 +5,17 @@ const Hero = () => {
   return (
     <section id='hero' className='bg-white'>
         {/* flex container */}
-        <div className='flex flex-col-reverse md:flex-row w-[390px] md:w-[1350px] h-auto md:h-[820px] mx-auto
+        <div className='flex flex-col-reverse md:flex-row w-[390px] md:w-[1350px] h-full md:h-[820px] mx-auto
          mt-0 px-0 md:px-15'>
             {/* left item */}
-            <div className='flex flex-col w-[390px] md:w-[637px] h-[123px] md:h-[520px] mt-4 md:mt-20 items-start'>
+            <div className='flex flex-col w-[390px] md:w-[637px] h-[335px] md:h-[520px] mt-4 md:mt-20 items-start'>
                 <h4 className='text-[16px] md:text-[20px] font-semibold text-[#888888]'>Introducing All New Lab Test Facility</h4>
                 <h1 className='text-[35px] md:text-[55px] font-bold text-[#151516] mt-2 leading-tight'>Discover 
                     Accurate Diagnostics & Reliable <span className='text-[#407BFF]'>Testing Services.</span></h1>
                  {/* button */}
-                 <div className='flex flex-row relative w-[350px] h-[101px] md:w-fit md:h-fit mt-6 md:mt-10
+                 <div className='flex flex-row relative w-[350px] h-[48px] md:w-fit md:h-fit mt-6 md:mt-10
                   gap-5'>
-                 <button className='flex flex-row w-[199px] md:w-[216px] h-[48px] px-3 md:px-6 py-3 gap-3 
+                 <button className='flex flex-row w-[199px] md:w-[216px] max-h-[48px] px-3 md:px-6 py-3 gap-3 
                  text-[16px] bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600
                   transition duration-300 cursor-pointer'>Book Appointment
                     <Image
