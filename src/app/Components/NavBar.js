@@ -30,7 +30,7 @@ const NavBar = () => {
             <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300'>Contact Us</button>
         </div> 
              {/* mobile Nav */}
-        <div className='md:hidden flex flex-row gap-15'>
+        <div className='md:hidden flex flex-row gap-35'>
         <div className='md:hidden flex gap-2'>
         <Image
         src='/menu.svg'
