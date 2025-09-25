@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <section id='hero' className='bg-white'>
         {/* flex container */}
-        <div className='flex flex-col-reverse md:flex-row w-[390px] md:w-[1350px] h-full md:h-[820px] mx-auto
-         mt-0 px-0 md:px-15'>
+        <div className='flex flex-col-reverse md:flex-row w-full md:w-[1350px] h-[770px] md:h-[820px] mx-auto
+         mt-0 px-3 md:px-15 overflow-hidden'>
             {/* left item */}
-            <div className='flex flex-col w-[390px] md:w-[637px] h-[335px] md:h-[520px] mt-4 md:mt-20 items-start'>
+            <div className='flex flex-col w-[395px] md:w-[637px] h-[435px] md:h-[520px] mt-4 md:mt-20 px-2 md:px-0 items-start'>
                 <h4 className='text-[16px] md:text-[20px] font-semibold text-[#888888]'>Introducing All New Lab Test Facility</h4>
                 <h1 className='text-[35px] md:text-[55px] font-bold text-[#151516] mt-2 leading-tight'>Discover 
                     Accurate Diagnostics & Reliable <span className='text-[#407BFF]'>Testing Services.</span></h1>
@@ -87,8 +87,9 @@ const Hero = () => {
             <Image
             src='/Hero Image.svg'
             alt='Hero Image'
-            width={881}
-            height={881}
+            width={581}
+            height={731}
+            priority
             className='flex md:justify-end object-cover w-[390px] h-[500px] 
             md:w-[581px] md:h-[731px] mt-[-2rem] md:mt-[-3rem] mr-30px md:mr-0'
             />

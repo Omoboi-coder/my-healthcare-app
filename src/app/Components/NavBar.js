@@ -5,7 +5,7 @@ import Link from 'next/link'
 const NavBar = () => {
   return (
   <section id='navbar' className='bg-white shadow-lg'>
-    <nav className='flex flex-row w-[390px] md:w-[1350px] h-[92px] mx-auto
+    <nav className='flex flex-row w-full md:w-[1350px] h-[92px] mx-auto
     justify-between items-center px-0 md:px-15'>
         {/* Logo */}
         <div className='hidden md:block'>
@@ -30,7 +30,7 @@ const NavBar = () => {
             <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300'>Contact Us</button>
         </div> 
              {/* mobile Nav */}
-        <div className='md:hidden flex flex-row gap-35'>
+        <div className='md:hidden flex flex-row gap-35 px-3'>
         <div className='md:hidden flex gap-2'>
         <Image
         src='/menu.svg'
