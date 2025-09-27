@@ -5,10 +5,10 @@ const ChooseUs = () => {
   return (
     <section id='package' className='bg-[#F5F8FF]'>
         {/* flex container */}
-        <div className='flex flex-col w-full h-[2259px] md:w-[1350px] md:h-[937px] mx-auto px-7
+        <div className='flex flex-col w-full h-[2259px] md:w-[1350px] md:h-[890px] mx-auto px-7
          md:px-15 relative overflow-hidden '>
              <div className='flex flex-col w-[250px] h-[110px] md:w-[333px] md:h-[150px]
-              space-y-8 mx-auto mt-0 md:mt-5'>
+              space-y-8 mx-auto mt-0 md:mt-0'>
             {/* heading */}
                 <Image  
                 src='/Vector (12).svg'
@@ -21,7 +21,7 @@ const ChooseUs = () => {
                 </div>
 
                 {/* Features con */}
-                <div className='grid grid-cols-1 md:grid-cols-3 w-full h-[2109px] md:w-[1048px] md:h-[692px] mx-auto mt-6 md:mt-10
+                <div className='grid grid-cols-1 md:grid-cols-3 w-full h-[2109px] md:w-[1048px] md:h-[692px] mx-auto mt-6 md:mt-8
                  gap-0 md:space-y-3 md:gap-12 z-20'>
                     {/* grid 1 */}
                     <div className='flex flex-col w-full md:w-[316px] h-[316px] gap-8 items-center mx-auto md:mx-0 bg-white rounded-[10px] 

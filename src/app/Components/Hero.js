@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section id='hero' className='bg-white'>
         {/* flex container */}
-        <div className='flex flex-col-reverse md:flex-row w-full md:w-[1350px] h-[770px] md:h-[820px] mx-auto
+        <div className='flex flex-col-reverse md:flex-row w-full md:w-[1350px] h-[770px] md:h-[780px] mx-auto
          mt-0 px-3 md:px-15 overflow-hidden'>
             {/* left item */}
             <div className='flex flex-col w-[395px] md:w-[637px] h-[435px] md:h-[520px] mt-4 md:mt-20 px-2 md:px-0 items-start'>
@@ -16,7 +16,7 @@ const Hero = () => {
                  <div className='flex flex-row relative w-[350px] h-[48px] md:w-fit md:h-fit mt-6 md:mt-10
                   gap-5'>
                  <button className='flex flex-row w-[199px] md:w-[216px] max-h-[48px] px-3 md:px-6 py-3 gap-3 
-                 text-[16px] bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600
+                 text-[16px] items-center bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600
                   transition duration-300 cursor-pointer'>Book Appointment
                     <Image
                     src='/arrow-right (1).svg'
@@ -26,7 +26,7 @@ const Hero = () => {
                     />
                  </button>
                  <button className='flex flex-row w-[131px] md:w-[157px] h-[48px] px-2 md:px-6 2xl:px-5
-                  py-3 gap-2 border border-[#151516] md:border-blue-500 text-[#151516] rounded-lg 
+                  py-3 gap-2 items-center border border-[#151516] md:border-blue-500 text-[#151516] rounded-lg 
                   font-bold hover:bg-blue-500 hover:text-white transition duration-300 cursor-pointer'>Learn More
                      <Image
                     src='/arrow-right.svg'

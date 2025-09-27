@@ -5,11 +5,11 @@ const GetInTouch = () => {
   return (
  <section id='Get In Touch' className='bg-[#F5F8FF]'>
         {/* flex container */}
-    <div className='flex flex-col w-full h-[1209px] md:w-[1350px] md:h-[1000px] 
+    <div className='flex flex-col w-full h-[1209px] md:w-[1350px] md:h-[950px] 
     mx-auto px-5 md:px-15 relative overflow-hidden'>
         {/* heading */} 
          <div className='flex flex-col w-[215px] h-[150px] md:w-[398px] md:h-[80px]
-          space-y-5 md:space-y-8 mx-auto mt-0 md:mt-5'>
+          space-y-5 md:space-y-8 mx-auto mt-0 md:mt-0'>
             <Image  
             src='/Vector (10).svg'
             alt='Vector'
@@ -21,7 +21,7 @@ const GetInTouch = () => {
             </div>
 
             {/* contact information div */}
-            <div className='flex flex-col md:flex-row w-[358px] min-h-[995px] md:w-[1196px] md:h-[667px] rounded-[8px]
+            <div className='flex flex-col md:flex-row w-[358px] min-h-[995px] md:w-[1196px] md:min-h-[667px] rounded-[8px]
             mx-auto mt-5 md:mt-25 p-0 md:p-2 gap-6 md:gap-10 bg-white border border-gray-200 z-20 '>
                 {/* left item */}
                 <div className='flex flex-col w-[334px] h-[215px] md:w-[491px] mx-auto md:mx-0 

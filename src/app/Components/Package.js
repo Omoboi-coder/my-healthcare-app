@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 const Package = () => {
   return (
-    <section id='package' className='bg-[#F5F8FF]'>
+    <section id='package' className='bg-[#F5F8FF] '>
         {/* flex container */}
-        <div className='flex flex-col w-full h-[1615px] md:w-[1350px] md:h-[832px] mx-auto px-5 min-[430px]:px-7 
-        min-[414px]:px-5 md:px-15 relative overflow-visible md:overflow-hidden '>
+        <div className='flex flex-col w-full h-[1615px] md:w-[1350px] md:h-[702px] mx-auto px-5 min-[430px]:px-7 
+        min-[414px]:px-5 md:px-15 relative overflow-visible'>
 
-            <div className='flex flex-col w-[215px] h-[110px] md:w-[291px] md:h-[80px] space-y-8 mx-auto mt-5'>
+            <div className='flex flex-col w-[215px] h-[110px] md:w-[291px] md:h-[80px] space-y-8 mx-auto mt-0'>
             {/* heading */}
              <Image  
                src='/Vector (10).svg'
@@ -21,7 +21,7 @@ const Package = () => {
             </div>
             {/* Cards container */}
             <div className='flex flex-col md:flex-row w-full h-[1655px] md:w-[1217px] md:h-[484px]
-             gap-[30px] md:gap-[50px] mt-10 md:mt-30 z-20'>
+             gap-[30px] md:gap-[50px] mt-10 md:mt-25 z-20'>
                 
                 {/* card 1 */}
                  <div className='flex flex-col w-[372px] h-[443px] bg-white border
@@ -79,7 +79,7 @@ const Package = () => {
                     </div>
                 </div>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
-                     py-3 gap-25 border border-blue-500 text-[#151516] rounded-lg 
+                     py-3 gap-25 items-center border border-blue-500 text-[#151516] rounded-lg 
                     font-bold hover:bg-blue-500 hover:text-white
                      transition duration-300 cursor-pointer'>Know More
                     <Image
@@ -157,7 +157,7 @@ const Package = () => {
                     </div>
                 </div>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
-                     py-3 gap-25 border border-transparent bg-[#407BFF] text-white rounded-lg  hover:border-blue-500
+                     py-3 gap-25 items-center border border-transparent bg-[#407BFF] text-white rounded-lg  hover:border-blue-500
                       font-bold hover:bg-white hover:text-black 
                      transition duration-300 cursor-pointer'>Know More  
                     <Image
@@ -226,7 +226,7 @@ const Package = () => {
                     </div>
                 </div>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
-                     py-3 gap-25 border border-blue-500 text-[#151516] rounded-lg
+                     py-3 gap-25 items-center border border-blue-500 text-[#151516] rounded-lg
                     font-bold hover:bg-blue-500 hover:text-white transition duration-300 cursor-pointer'>Know More
                     <Image
                     src='/arrow-right.svg'
@@ -240,7 +240,7 @@ const Package = () => {
             </div>
               {/* Background overlays remain the same */}
                 <div 
-                className="absolute bottom-[-6rem] md:bottom-0 left-[-5rem] md:left-[-6rem] 2xl:left-[]
+                className="absolute bottom-[-6rem] md:bottom-[-7rem] left-[-5rem] md:left-[-5.5rem] 2xl:left-[]
                 z-0 opacity-100 w-[253px] h-[253px] md:w-[308px] md:h-[308px]"
                 style={{
                 backgroundImage: "url('/Clip path.svg')",
