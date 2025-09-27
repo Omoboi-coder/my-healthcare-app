@@ -80,7 +80,8 @@ const Package = () => {
                 </div>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
                      py-3 gap-25 border border-blue-500 text-[#151516] rounded-lg 
-                    font-bold hover:bg-blue-500 hover:text-white transition duration-300 cursor-pointer'>Know More
+                    font-bold hover:bg-blue-500 hover:text-white
+                     transition duration-300 cursor-pointer'>Know More
                     <Image
                     src='/arrow-right.svg'
                     alt='Arrow Right'
@@ -114,8 +115,8 @@ const Package = () => {
               <div className='flex flex-col mt-0 md:mt-[-8px] gap-5 px-5'>
               {/* item 1 */}
               <div className='flex flex-row w-[174px] h-[31px] gap-4 ml-[10rem]'>
-                <p className='text-[#666363] text-[24px] line-through'>$ 1999</p>
-                <p className='text-[#407BFF] text-[26px]'>$ 1499</p>
+                <p className='text-[#666363] text-[24px] line-through'>$ 2999</p>
+                <p className='text-[#407BFF] text-[26px]'>$ 2499</p>
                 
               </div>
               <div className='w-[340px] h-[82px] font-semibold space-y-2 '>
@@ -156,8 +157,9 @@ const Package = () => {
                     </div>
                 </div>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
-                     py-3 gap-25 border bg-[#407BFF] text-white rounded-lg font-bold hover:bg-blue-600 
-                     transition duration-300 cursor-pointer'>Know More
+                     py-3 gap-25 border border-transparent bg-[#407BFF] text-white rounded-lg  hover:border-blue-500
+                      font-bold hover:bg-white hover:text-black 
+                     transition duration-300 cursor-pointer'>Know More  
                     <Image
                     src='/arrow-right (1).svg'
                     alt='Arrow Right'
@@ -169,7 +171,8 @@ const Package = () => {
                  </div>
 
                 {/* card 3 */}
-                 <div className='flex flex-col w-[372px] h-[443px] bg-white border border-gray-200 mt-0 md:mt-10 gap-5 rounded-[12px] px-5 relative'>
+                 <div className='flex flex-col w-[372px] h-[443px] bg-white border
+                  border-gray-200 mt-0 md:mt-10 gap-5 rounded-[12px] px-5 relative'>
                     {/* Tag */}
              <Image  
                src='/Tag.svg'
@@ -180,13 +183,14 @@ const Package = () => {
               />
               {/* item 1 */}
               <div className='flex flex-row w-[174px] h-[31px] gap-4 ml-[10rem] mt-5'>
-                <p className='text-[#666363] text-[24px] line-through'>$ 1999</p>
-                <p className='text-[#407BFF] text-[26px]'>$ 1499</p>
+                <p className='text-[#666363] text-[24px] line-through'>$ 4999</p>
+                <p className='text-[#407BFF] text-[26px]'>$ 3499</p>
                 
               </div>
               <div className='w-[310px] h-[82px] font-semibold space-y-2 '>
                 <h3 className='text-[19px]'>Full Body Checkup - Advanced</h3>
-                <p className='text-[14px] text-[#666363]'>8 Tests - Complete Blood Count With ESR, Liver Test, Blood - Sugar & 5 Others.</p>
+                <p className='text-[14px] text-[#666363]'>8 Tests - Complete Blood Count With ESR, 
+                  Liver Test, Blood - Sugar & 5 Others.</p>
 
               </div>
               <span className=' w-[336px] h-0 border border-gray-200 mx-auto'></span>
@@ -222,7 +226,7 @@ const Package = () => {
                     </div>
                 </div>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
-                     py-3 gap-25 border border-blue-500 text-[#151516] rounded-lg 
+                     py-3 gap-25 border border-blue-500 text-[#151516] rounded-lg
                     font-bold hover:bg-blue-500 hover:text-white transition duration-300 cursor-pointer'>Know More
                     <Image
                     src='/arrow-right.svg'

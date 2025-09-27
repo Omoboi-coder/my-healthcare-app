@@ -5,10 +5,10 @@ const ChooseUs = () => {
   return (
     <section id='package' className='bg-[#F5F8FF]'>
         {/* flex container */}
-        <div className='flex flex-col w-full h-[2289px] md:w-[1350px] md:h-[937px] mx-auto px-7
+        <div className='flex flex-col w-full h-[2189px] md:w-[1350px] md:h-[937px] mx-auto px-7
          md:px-15 relative overflow-hidden '>
              <div className='flex flex-col w-[250px] h-[110px] md:w-[333px] md:h-[150px]
-              space-y-8 mx-auto mt-5'>
+              space-y-8 mx-auto mt-0 md:mt-5'>
             {/* heading */}
                 <Image  
                 src='/Vector (12).svg'
@@ -21,8 +21,8 @@ const ChooseUs = () => {
                 </div>
 
                 {/* Features con */}
-                <div className='grid grid-cols-1 md:grid-cols-3 w-full h-[2109px] md:w-[1048px] md:h-[692px] mx-auto mt-12 md:mt-10
-                 gap-0 space-y-0 md:space-y-3 md:gap-12 z-20'>
+                <div className='grid grid-cols-1 md:grid-cols-3 w-full h-[2109px] md:w-[1048px] md:h-[692px] mx-auto mt-6 md:mt-10
+                 gap-4 md:space-y-3 md:gap-12 z-20'>
                     {/* grid 1 */}
                     <div className='flex flex-col w-full md:w-[316px] h-[316px] gap-8 items-center mx-auto md:mx-0 bg-white rounded-[10px] 
                     border border-gray-200'>
@@ -132,7 +132,7 @@ const ChooseUs = () => {
                 </div>
                  {/* Background overlays remain the same */}
                     <div 
-                        className="absolute bottom-[40rem] md:bottom-[10rem] left-[-5rem] md:left-[65rem] 2xl:left-[]
+                        className="absolute bottom-[40rem] md:bottom-[10rem] left-[-5rem] md:left-[65rem] 
                         z-0 opacity-100 w-[214px] h-[214px] md:w-[377px] md:h-[408px] rotate-180 md:rotate-0"
                         style={{
                         backgroundImage: "url('/Minimal Pattern Large.svg')",
