@@ -207,7 +207,7 @@ const GetInTouch = () => {
                         className='w-full h-[90px] p-2 border border-gray-500 rounded-[8px] focus:outline-none'
                         />
                       </div>
-                      <button className='min-w-[199px] h-[48px] bg-[#407BFF] rounded-[8px] cursor-pointer text-white mx-auto mt-4 md:mt-6'>
+                      <button className='w-[199px] min-h-[48px] bg-[#407BFF] rounded-[8px] cursor-pointer text-white mx-auto py-3 mt-4 md:mt-6'>
                         Send Message
                       </button>
                   </div>
