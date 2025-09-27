@@ -41,7 +41,8 @@ const Hero = () => {
                     alt='Arrow'
                     width={47}
                     height={29}
-                    className='w-[39px] h-[29px] md:!w-[76px] md:!h-[49px] absolute bottom-[-1.5rem] md:bottom-[-3rem] left-25 md:left-29 z-10'
+                    className='w-[39px] h-[29px] md:!w-[76px] md:!h-[49px] absolute bottom-[-1.5rem] 
+                    md:bottom-[-3rem] left-25 md:left-29 z-10'
                     />
                     <Image
                     src='/Arrow 02.svg'
@@ -58,8 +59,6 @@ const Hero = () => {
                     height={13}
                     className='flex md:hidden w-[35px] h-[40px] absolute bottom-[-20px] left-[22rem] z-10'
                     />
-                    
-
                     <p className=' w-[192px] h-auto md:w-[139px] md:h-[71px] text-[#151516]  text-[12px] md:text-[14px] 
                     absolute bottom-[-4rem] md:bottom-[-7.5rem] left-7 md:left-20'>Stop waiting long queue Book online Appointment Now</p>
                     <p className='w-[129px] h-auto md:w-[100px] md:h-[71px] text-end md:text-start text-[#407BFF]  text-[12px] md:text-[14px] absolute 
@@ -91,7 +90,7 @@ const Hero = () => {
             height={731}
             priority
             className='flex md:justify-end object-cover w-[390px] h-[500px] 
-            md:w-[581px] md:h-[731px] mt-[-2rem] md:mt-[-3rem] mr-30px md:mr-0'
+            md:w-[581px] md:h-[731px] mt-[-2rem] md:mt-[-3rem] ml-[3px] min-[430px]:ml-[10px] md:ml-0'
             />
             {/* positioned images */}
             <Image
@@ -132,7 +131,8 @@ const Hero = () => {
             alt='Frame'
             width={1312}
             height={138}
-            className='hidden md:block w-[390px] h-[138px] md:w-[1220px] md:h-[138px] mx-auto absolute bottom-[-5rem] md:bottom-[-15rem] 2xl:top-[46rem]'
+            className='hidden md:block w-[390px] h-[138px] md:w-[1220px] md:h-[138px] mx-auto
+             absolute bottom-[-5rem] md:bottom-[-15rem] 2xl:top-[46rem]'
             />
         </div>
        
