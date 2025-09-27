@@ -5,7 +5,7 @@ const Package = () => {
   return (
     <section id='package' className='bg-[#F5F8FF]'>
         {/* flex container */}
-        <div className='flex flex-col w-full h-[1655px] md:w-[1350px] md:h-[832px] mx-auto px-5 min-[430px]:px-7 
+        <div className='flex flex-col w-full h-[1615px] md:w-[1350px] md:h-[832px] mx-auto px-5 min-[430px]:px-7 
         min-[414px]:px-5 md:px-15 relative overflow-visible md:overflow-hidden '>
 
             <div className='flex flex-col w-[215px] h-[110px] md:w-[291px] md:h-[80px] space-y-8 mx-auto mt-5'>
@@ -240,7 +240,7 @@ const Package = () => {
             </div>
               {/* Background overlays remain the same */}
                 <div 
-                className="absolute bottom-[-5rem] md:bottom-0 left-[-5rem] md:left-[-6rem] 2xl:left-[]
+                className="absolute bottom-[-6rem] md:bottom-0 left-[-5rem] md:left-[-6rem] 2xl:left-[]
                 z-0 opacity-100 w-[253px] h-[253px] md:w-[308px] md:h-[308px]"
                 style={{
                 backgroundImage: "url('/Clip path.svg')",

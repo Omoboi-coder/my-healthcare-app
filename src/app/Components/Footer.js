@@ -45,6 +45,22 @@ const Footer = () => {
                     <p>Gurgaon , Haryana</p>
                     </div>
                 </div>
+                     {/* mobile text area */}
+                <div className='md:hidden flex flex-col w-[358px] h-[122px] md:w-[373px] md:h-[151px] bg-white
+                 border border-white rounded-[8px] px-4 mt-0 md:mt-7 relative'>
+                    <h3 className='w-fit text-[#161617] md:text-[20px] mt-3 md:mt-2 font-semibold'>Join Our Newsletter</h3>
+                    <input
+                    placeholder='Your email address'
+                    className='w-[322px] md:w-[343px] h-[39px] text-[14px] placeholder:text-gray-500 border border-gray-300 rounded-[6px] p-2 
+                    mt-5 focus:outline-none'
+                    />
+                    <button className='w-[105px] h-[38px] md:w-[90px] md:h-[38px] bg-[#407BFF] text-white absolute top-[3.5rem] md:top-[3.6rem] 
+                    left-[14.5rem] md:left-[16.8rem] rounded-[6px] cursor-pointer'>
+                        Subcribe
+                    </button>
+
+                </div>
+
                 {/* item 2 */}
                 <div className='flex flex-row-reverse md:flex-row w-[353px] h-[250px] md:w-[431px] md:h-[211px] gap-[7rem] md:gap-[12rem] mt-0 md:mt-7'>
                     {/* company div */}
@@ -69,7 +85,7 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* text area */}
-                <div className='flex flex-col w-[358px] h-[122px] md:w-[373px] md:h-[151px] bg-white
+                <div className='hidden md:flex flex-col w-[358px] h-[122px] md:w-[373px] md:h-[151px] bg-white
                  border border-white rounded-[8px] px-4 mt-0 md:mt-7 relative'>
                     <h3 className='w-fit text-[#161617] md:text-[20px] mt-2 font-semibold'>Join Our Newsletter</h3>
                     <input

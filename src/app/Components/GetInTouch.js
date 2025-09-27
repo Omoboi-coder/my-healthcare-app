@@ -21,7 +21,7 @@ const GetInTouch = () => {
             </div>
 
             {/* contact information div */}
-            <div className='flex flex-col md:flex-row w-[358px] h-[985px] md:w-[1196px] md:h-[667px] rounded-[8px]
+            <div className='flex flex-col md:flex-row w-[358px] min-h-[995px] md:w-[1196px] md:h-[667px] rounded-[8px]
             mx-auto mt-5 md:mt-25 p-0 md:p-2 gap-6 md:gap-10 bg-white border border-gray-200 z-20 '>
                 {/* left item */}
                 <div className='flex flex-col w-[334px] h-[215px] md:w-[491px] mx-auto md:mx-0 
@@ -207,7 +207,7 @@ const GetInTouch = () => {
                         className='w-full h-[90px] p-2 border border-gray-500 rounded-[8px] focus:outline-none'
                         />
                       </div>
-                      <button className='w-[199px] h-[48px] bg-[#407BFF] rounded-[8px] cursor-pointer text-white mx-auto mt-4 md:mt-6'>
+                      <button className='min-w-[199px] h-[48px] bg-[#407BFF] rounded-[8px] cursor-pointer text-white mx-auto mt-4 md:mt-6'>
                         Send Message
                       </button>
                   </div>
