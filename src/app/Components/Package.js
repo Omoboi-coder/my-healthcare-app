@@ -8,7 +8,7 @@ const Package = () => {
         <div className='flex flex-col w-full h-[1615px] md:w-[1350px] md:h-[702px] mx-auto px-5 min-[430px]:px-7 
         min-[414px]:px-5 md:px-15 relative overflow-visible'>
 
-            <div className='flex flex-col w-[215px] h-[110px] md:w-[291px] md:h-[80px] space-y-8 mx-auto mt-0'>
+            <div className='flex flex-col w-[215px] h-[110px] md:w-[291px] md:h-[80px] space-y-8 mx-auto mt-4'>
             {/* heading */}
              <Image  
                src='/Vector (10).svg'

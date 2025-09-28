@@ -132,7 +132,7 @@ const Hero = () => {
             width={1312}
             height={138}
             className='hidden md:block w-[390px] h-[138px] md:w-[1220px] md:h-[138px] mx-auto
-             absolute bottom-[-5rem] md:bottom-[-15rem] 2xl:top-[46rem]'
+             absolute bottom-[-5rem] md:bottom-[-15rem] 2xl:top-[45rem]'
             />
         </div>
        
