@@ -17,17 +17,25 @@ const NavBar = () => {
         /> 
         </div>
         {/* Navigation Links */}
-        <div className='hidden md:flex flex-row md:w-[452px] h-[24px] gap-8 text-[20px] ml-8 font-medium text-[#888888]'>
-            <Link href='#home' className='hover:text-blue-500 transition duration-300'>Home</Link>
-            <Link href='#services' className='hover:text-blue-500 transition duration-300'>Services</Link>
-            <Link href='#team' className='hover:text-blue-500 transition duration-300'>Team</Link>
-            <Link href='#events' className='hover:text-blue-500 transition duration-300'>Events</Link>
-            <Link href='#aboutus' className='hover:text-blue-500 transition duration-300'>About Us</Link>
+        <div className='hidden md:flex flex-row md:w-[452px] h-[24px] gap-8 text-[20px] ml-8 
+              font-medium text-[#888888]'>
+            <Link href='#hero' className='hover:text-blue-500 transition duration-300'>Home</Link>
+            <Link href='#package' className='hover:text-blue-500 transition duration-300'>Services</Link>
+            <Link href='#chooseus' className='hover:text-blue-500 transition duration-300'>Team</Link>
+            <Link href='#footer' className='hover:text-blue-500 transition duration-300'>Events</Link>
+            <Link href='#footer' className='hover:text-blue-500 transition duration-300'>About Us</Link>
         </div>
+        
         {/* Action Buttons */}
         <div className='hidden md:flex flex-row gap-4'>
-            <button className=' px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white'>Login</button>
-            <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300'>Contact Us</button>
+          <Link href='/home'>
+            <button className=' px-4 py-2 border border-blue-500 text-blue-500 rounded
+             hover:bg-blue-500 hover:text-white'>Login</button>
+            </Link>
+            <Link href='#getintouch'>
+            <button className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600
+             transition duration-300'>Contact Us</button>
+              </Link>
         </div> 
              {/* mobile Nav */}
         <div className='md:hidden flex flex-row min-[430px]:gap-40 gap-36 px-3'>
@@ -40,11 +48,9 @@ const NavBar = () => {
         />
         <span className='text-[#407BFF] text-[25px] font-semibold'>ProMed</span>
         </div>
-          <button className='px-5 py-1.5 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300'>Contact Us</button>
-        </div> 
-
-
-      
+          <button className='px-5 py-1.5 bg-blue-500 text-white rounded hover:bg-blue-600
+           transition duration-300'>Contact Us</button>
+        </div>    
     </nav>
   </section>
   )

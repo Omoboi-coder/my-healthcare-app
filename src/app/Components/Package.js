@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Package = () => {
   return (
@@ -156,6 +157,7 @@ const Package = () => {
                     <p>Online & Physical Report</p>
                     </div>
                 </div>
+								<Link href='#'>
                 <button className='flex flex-row w-[247px] h-[48px] mt-2 mx-auto px-2 md:px-4 2xl:px-5
                      py-3 gap-25 items-center border border-transparent bg-[#407BFF] text-white rounded-lg  hover:border-blue-500
                       font-bold hover:bg-white hover:text-black 
@@ -167,6 +169,7 @@ const Package = () => {
                     height={12}
                     />
                     </button>
+										</Link>
                     </div>
                  </div>
 

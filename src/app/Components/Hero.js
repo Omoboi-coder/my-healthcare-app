@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link  from 'next/link'
 
 const Hero = () => {
   return (
@@ -15,6 +16,7 @@ const Hero = () => {
                  {/* button */}
                  <div className='flex flex-row relative w-[350px] h-[48px] md:w-fit md:h-fit mt-6 md:mt-10
                   gap-5'>
+                  <Link href="/bookings">
                  <button className='flex flex-row w-[199px] md:w-[216px] max-h-[48px] px-3 md:px-6 py-3 gap-3 
                  text-[16px] items-center bg-blue-500 text-white rounded-lg font-bold hover:bg-blue-600
                   transition duration-300 cursor-pointer'>Book Appointment
@@ -25,6 +27,7 @@ const Hero = () => {
                     height={12}
                     />
                  </button>
+                 </Link>
                  <button className='flex flex-row w-[131px] md:w-[157px] h-[48px] px-2 md:px-6 2xl:px-5
                   py-3 gap-2 items-center border border-[#151516] md:border-blue-500 text-[#151516] rounded-lg 
                   font-bold hover:bg-blue-500 hover:text-white transition duration-300 cursor-pointer'>Learn More

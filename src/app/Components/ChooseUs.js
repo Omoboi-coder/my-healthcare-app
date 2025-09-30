@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const ChooseUs = () => {
   return (
-    <section id='package' className='bg-[#F5F8FF]'>
+    <section id='chooseus' className='bg-[#F5F8FF]'>
         {/* flex container */}
         <div className='flex flex-col w-full h-[2259px] md:w-[1350px] md:h-[890px] mx-auto px-7
          md:px-15 relative overflow-hidden '>
