@@ -8,8 +8,8 @@ const DashboardLayout = ({ children }) => {
   return (
      <section className='bg-[#F5F8FF]'>
             {/* Mobile navbar - only shows on small screens */}
-      <nav className='md:hidden flex'>
-        <div className='flex justify-center px-7 pt-6 pb-4'>
+      <nav className='md:hidden flex '>
+        <div className='flex w-full h-[92px] items-center mx-auto px-4 pt-4'>
            {/* Logo */}
            <Link href='#'>
                  <div className='hidden md:block'>
@@ -21,8 +21,19 @@ const DashboardLayout = ({ children }) => {
                  /> 
                  </div>
           </Link>
-          {/* Hamburger Menu */}
-          <SidebarMenu />
+              {/* mobile Nav */}
+                  <div className='md:hidden flex flex-row w-full justify-between items-center '>
+                  <div className='md:hidden flex flex-row gap-3'>
+                       {/* Hamburger Menu */}
+                         <SidebarMenu />
+                  <span className='text-[#407BFF] text-[25px] font-semibold'>ProMed</span>
+                  </div>
+                <Link href='/'>
+                <button className='px-4 py-2 text-[17px] font-semibold border border-blue-500 text-blue-500 rounded
+                hover:bg-blue-500 hover:text-white'>Contact Us</button>
+                </Link>
+                </div>   
+       
           
         </div>
       </nav>

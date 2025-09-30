@@ -38,7 +38,7 @@ const NavBar = () => {
               </Link>
         </div> 
              {/* mobile Nav */}
-        <div className='md:hidden flex flex-row min-[430px]:gap-40 gap-36 px-3'>
+        <div className='md:hidden flex flex-row w-full justify-between px-3'>
         <div className='md:hidden flex gap-2'>
         <Image
         src='/menu.svg'
@@ -48,8 +48,10 @@ const NavBar = () => {
         />
         <span className='text-[#407BFF] text-[25px] font-semibold'>ProMed</span>
         </div>
+        <Link href='/home'>
           <button className='px-5 py-1.5 bg-blue-500 text-white rounded hover:bg-blue-600
-           transition duration-300'>Contact Us</button>
+           transition duration-300'>Login</button>
+           </Link>
         </div>    
     </nav>
   </section>
