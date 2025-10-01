@@ -28,6 +28,7 @@ const Hero = () => {
                     />
                  </button>
                  </Link>
+                 <Link href='#chooseus'>
                  <button className='flex flex-row w-[131px] md:w-[157px] h-[48px] px-2 md:px-6 2xl:px-5
                   py-3 gap-2 items-center border border-[#151516] md:border-blue-500 text-[#151516] rounded-lg 
                   font-bold hover:bg-blue-500 hover:text-white transition duration-300 cursor-pointer'>Learn More
@@ -38,6 +39,7 @@ const Hero = () => {
                     height={12}
                     />
                  </button>
+                 </Link>
                  {/* indicators */}
                    <Image
                     src='/Arrow 15.svg'

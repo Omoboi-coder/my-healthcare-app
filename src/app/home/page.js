@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import DashboardLayout from '../Components/DashboardLayout';
+import Link from 'next/link';
 
 const DashboardHome = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -92,14 +93,17 @@ const DashboardHome = () => {
             <h3 className="font-bold text-lg mb-1">My Health</h3>
             <p className="text-purple-100 text-sm">Health metrics</p>
           </button>
-
+          
           <button className="bg-gradient-to-br from-orange-500 to-orange-600
            hover:from-orange-600 hover:to-orange-700 rounded-2xl p-6 text-white shadow-lg 
            hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <Link href='/profile'>
             <div className="text-4xl mb-3">👤</div>
             <h3 className="font-bold text-lg mb-1">Profile</h3>
             <p className="text-orange-100 text-sm">Account settings</p>
+            </Link>
           </button>
+          
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
