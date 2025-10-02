@@ -105,38 +105,38 @@ const ProfileSettings = () => {
         </div>
 
         {/* Tabs */}
-        <div className="bg-white rounded-2xl shadow-lg p-2 mb-6 inline-flex gap-2">
-          <button
-            onClick={() => setActiveTab('personal')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all ${
-              activeTab === 'personal'
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
-          >
-            👤 Personal Info
-          </button>
-          <button
-            onClick={() => setActiveTab('security')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all ${
-              activeTab === 'security'
-                ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
-          >
-            🔒 Security
-          </button>
-          <button
-            onClick={() => setActiveTab('notifications')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all ${
-              activeTab === 'notifications'
-                ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
-                : 'text-gray-600 hover:bg-gray-100'
-            }`}
-          >
-            🔔 Notifications
-          </button>
-        </div>
+        <div className="bg-white rounded-2xl shadow-lg p-2 mb-6 flex flex-wrap gap-2 w-full">
+  <button
+    onClick={() => setActiveTab('personal')}
+    className={`flex-1 min-w-[140px] px-4 py-3 rounded-xl font-semibold transition-all ${
+      activeTab === 'personal'
+        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+        : 'text-gray-600 hover:bg-gray-100'
+    }`}
+  >
+    👤 Personal Info
+  </button>
+  <button
+    onClick={() => setActiveTab('security')}
+    className={`flex-1 min-w-[140px] px-4 py-3 rounded-xl font-semibold transition-all ${
+      activeTab === 'security'
+        ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+        : 'text-gray-600 hover:bg-gray-100'
+    }`}
+  >
+    🔒 Security
+  </button>
+  <button
+    onClick={() => setActiveTab('notifications')}
+    className={`flex-1 min-w-[140px] px-4 py-3 rounded-xl font-semibold transition-all ${
+      activeTab === 'notifications'
+        ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
+        : 'text-gray-600 hover:bg-gray-100'
+    }`}
+  >
+    🔔 Notifications
+  </button>
+</div>
 
         {/* Personal Info Tab */}
         {activeTab === 'personal' && (
@@ -225,7 +225,7 @@ const ProfileSettings = () => {
                   value={profileData.bloodGroup}
                   onChange={handleInputChange}
                  
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
+                  className="w-full px-4 py-3  bg-white border-2 border-purple-200 rounded-xl focus:ring-2
                   text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
                 >
                   <option>A+</option>
