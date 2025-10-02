@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import DashboardLayout from '../Components/DashboardLayout';
 
 const ProfileSettings = () => {
@@ -7,14 +7,14 @@ const ProfileSettings = () => {
   const [isEditing, setIsEditing] = useState(false);
   
   const [profileData, setProfileData] = useState({
-    fullName: 'Omor kenny',
+    fullName: 'Omor Kenny',
     email: 'omorkenny@email.com',
-    phone: '+ 999 999 9999',
+    phone: '+999 999 9999',
     dateOfBirth: '1990-05-15',
     gender: 'Male',
     bloodGroup: 'O+',
     address: '123 Health Street, Downtown',
-    emergencyContact: '+ 999 999 9999',
+    emergencyContact: '+999 999 9999',
     emergencyName: 'Omor Taiye'
   });
 
@@ -51,44 +51,40 @@ const ProfileSettings = () => {
 
   return (
     <DashboardLayout>
-    <div className="w-full min-h-screen bg-gradient-to-br from-rose-50 via-purple-50 to-blue-50 p-4 md:p-6">
+    <div className="w-full min-h-screen bg-gray-50 p-4 md:p-6">
       <div className="max-w-6xl mx-auto">
         
-        {/* Header with Profile Card */}
-        <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-rose-500 rounded-3xl p-8 mb-6 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-10 rounded-full -ml-24 -mb-24"></div>
-          
-          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
+        {/* Header Section */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+          <div className="flex flex-col md:flex-row text-center md:text-start items-center gap-6">
             {/* Avatar */}
             <div className="relative">
-              <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl flex items-center justify-center text-6xl shadow-2xl">
-                👤
+              <div className="w-24 h-24 bg-[#407BFF] rounded-lg flex items-center justify-center">
+                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
               </div>
-              <button className="absolute bottom-0 right-0 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition">
-                <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="absolute bottom-0 right-0 w-8 h-8 bg-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-800 transition">
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </button>
             </div>
 
-            {/* Info */}
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl font-bold text-white mb-2">{profileData.fullName}</h1>
-              <p className="text-purple-100 text-lg mb-4">{profileData.email}</p>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <span className="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-purple-600
-                 text-sm font-semibold">
-                  🩸 {profileData.bloodGroup}
+            {/* User Info */}
+            <div className="flex-1">
+              <h1 className="text-2xl font-bold text-gray-900 mb-1">{profileData.fullName}</h1>
+              <p className="text-gray-600 mb-3">{profileData.email}</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
+                  Blood Group: {profileData.bloodGroup}
                 </span>
-                <span className="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-purple-600
-                 text-sm font-semibold">
-                  📅 Member since 2024
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
+                  Member since 2024
                 </span>
-                <span className="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full text-purple-600
-                 text-sm font-semibold">
-                  ✅ Verified
+                <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                  Verified
                 </span>
               </div>
             </div>
@@ -96,121 +92,109 @@ const ProfileSettings = () => {
             {/* Edit Button */}
             <button
               onClick={() => setIsEditing(!isEditing)}
-              className="px-6 py-3 bg-white text-purple-600 rounded-xl font-bold hover:shadow-xl transition
-               transform hover:-translate-y-1"
+              className="px-5 py-2.5 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition"
             >
-              {isEditing ? ' Editing...' : ' Edit Profile'}
+              {isEditing ? 'Cancel Edit' : 'Edit Profile'}
             </button>
           </div>
         </div>
 
         {/* Tabs */}
-        <div className="bg-white rounded-2xl shadow-lg p-2 mb-6 flex flex-wrap gap-2 w-full">
-  <button
-    onClick={() => setActiveTab('personal')}
-    className={`flex-1 min-w-[140px] px-4 py-3 rounded-xl font-semibold transition-all ${
-      activeTab === 'personal'
-        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
-        : 'text-gray-600 hover:bg-gray-100'
-    }`}
-  >
-    👤 Personal Info
-  </button>
-  <button
-    onClick={() => setActiveTab('security')}
-    className={`flex-1 min-w-[140px] px-4 py-3 rounded-xl font-semibold transition-all ${
-      activeTab === 'security'
-        ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
-        : 'text-gray-600 hover:bg-gray-100'
-    }`}
-  >
-    🔒 Security
-  </button>
-  <button
-    onClick={() => setActiveTab('notifications')}
-    className={`flex-1 min-w-[140px] px-4 py-3 rounded-xl font-semibold transition-all ${
-      activeTab === 'notifications'
-        ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg'
-        : 'text-gray-600 hover:bg-gray-100'
-    }`}
-  >
-    🔔 Notifications
-  </button>
-</div>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-1 mb-6 inline-flex">
+          <button
+            onClick={() => setActiveTab('personal')}
+            className={`px-5.5 md:px-6 py-3 rounded-lg text-sm font-semibold transition-all ${
+              activeTab === 'personal'
+                ? 'bg-[#407BFF] text-white'
+                : 'text-gray-600 hover:bg-gray-100'
+            }`}
+          >
+            Personal Info
+          </button>
+          <button
+            onClick={() => setActiveTab('security')}
+            className={`px-6 py-3 rounded-lg text-sm font-semibold transition-all ${
+              activeTab === 'security'
+                ? 'bg-[#407BFF] text-white'
+                : 'text-gray-600 hover:bg-gray-100'
+            }`}
+          >
+            Security
+          </button>
+          <button
+            onClick={() => setActiveTab('notifications')}
+            className={`px-6 py-3 rounded-lg text-sm font-semibold transition-all ${
+              activeTab === 'notifications'
+                ? 'bg-[#407BFF] text-white'
+                : 'text-gray-600 hover:bg-gray-100'
+            }`}
+          >
+            Notifications
+          </button>
+        </div>
 
         {/* Personal Info Tab */}
         {activeTab === 'personal' && (
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 shadow-xl border-2
-           border-purple-200">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex 
-              items-center justify-center text-2xl shadow-lg">
-                📝
-              </div>
-              <h2 className="text-2xl font-bold text-gray-800">Personal Information</h2>
-            </div>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-lg font-semibold text-gray-900 mb-6">Personal Information</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                 <input
                   type="text"
                   name="fullName"
                   value={profileData.fullName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                   focus:ring-purple-500 
-                  text-[#666363] placeholder:text-[#666363] focus:border-transparent outline-none transition
-                   disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
                   value={profileData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none
-                   transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                 <input
                   type="tel"
                   name="phone"
                   value={profileData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent
-                   outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Date of Birth</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
                 <input
                   type="date"
                   name="dateOfBirth"
                   value={profileData.dateOfBirth}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Gender</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Gender</label>
                 <select
                   name="gender"
                   value={profileData.gender}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 >
                   <option>Male</option>
                   <option>Female</option>
@@ -219,14 +203,13 @@ const ProfileSettings = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Blood Group</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Blood Group</label>
                 <select
                   name="bloodGroup"
                   value={profileData.bloodGroup}
                   onChange={handleInputChange}
-                 
-                  className="w-full px-4 py-3  bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 >
                   <option>A+</option>
                   <option>A-</option>
@@ -240,57 +223,55 @@ const ProfileSettings = () => {
               </div>
 
               <div className="md:col-span-2">
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Address</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
                 <input
                   type="text"
                   name="address"
                   value={profileData.address}
                   onChange={handleInputChange}
-                  
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Emergency Contact Name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Emergency Contact Name</label>
                 <input
                   type="text"
                   name="emergencyName"
                   value={profileData.emergencyName}
                   onChange={handleInputChange}
-               
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">Emergency Contact Number</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Emergency Contact Number</label>
                 <input
                   type="tel"
                   name="emergencyContact"
                   value={profileData.emergencyContact}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white border-2 border-purple-200 rounded-xl focus:ring-2
-                  text-[#666363] placeholder:text-[#666363] focus:ring-purple-500 focus:border-transparent outline-none transition disabled:bg-gray-50"
+                  disabled={!isEditing}
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
                 />
               </div>
             </div>
 
             {isEditing && (
-              <div className="flex gap-4 mt-6">
+              <div className="flex gap-3 mt-6 pt-6 border-t border-gray-200">
                 <button
                   onClick={handleSave}
-                  className="flex-1 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-bold hover:shadow-xl transition transform hover:-translate-y-1"
+                  className="px-6 py-3 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition"
                 >
-                   Save Changes
+                  Save Changes
                 </button>
                 <button
                   onClick={() => setIsEditing(false)}
-                  className="flex-1 py-4 border-2 border-gray-300 text-gray-700 rounded-xl font-bold hover:bg-gray-50 transition"
+                  className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition"
                 >
-                   Cancel
+                  Cancel
                 </button>
               </div>
             )}
@@ -299,52 +280,43 @@ const ProfileSettings = () => {
 
         {/* Security Tab */}
         {activeTab === 'security' && (
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 shadow-xl border-2 border-blue-200">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center text-2xl shadow-lg">
-                🔐
+          <div className="space-y-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Password</h3>
+                  <p className="text-sm text-gray-600">Last changed 30 days ago</p>
+                </div>
+                <button
+                  onClick={handleChangePassword}
+                  className="px-5 py-2.5 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition"
+                >
+                  Change Password
+                </button>
               </div>
-              <h2 className="text-2xl font-bold text-gray-800">Security Settings</h2>
             </div>
 
-            <div className="space-y-4">
-              <div className="bg-white rounded-2xl p-6 shadow-md">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-gray-800 mb-1">Password</h3>
-                    <p className="text-gray-600 text-sm">Last changed 30 days ago</p>
-                  </div>
-                  <button
-                    onClick={handleChangePassword}
-                    className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl font-semibold hover:shadow-lg transition"
-                  >
-                    Change Password
-                  </button>
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">Two-Factor Authentication</h3>
+                  <p className="text-sm text-gray-600">Add an extra layer of security</p>
                 </div>
+                <button className="px-5 py-2.5 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition">
+                  Enable 2FA
+                </button>
               </div>
+            </div>
 
-              <div className="bg-white rounded-2xl p-6 shadow-md">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-gray-800 mb-1">Two-Factor Authentication</h3>
-                    <p className="text-gray-600 text-sm">Add an extra layer of security</p>
-                  </div>
-                  <button className="px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-xl font-semibold hover:bg-blue-50 transition">
-                    Enable 2FA
-                  </button>
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+              <div className="flex items-center justify-between">
+                <div className='flex flex-col w-[210px]'>
+                  <h3 className="font-semibold text-gray-900 mb-1">Active Sessions</h3>
+                  <p className="text-sm text-gray-600">Manage your active login sessions</p>
                 </div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-6 shadow-md">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="font-bold text-gray-800 mb-1">Active Sessions</h3>
-                    <p className="text-gray-600 text-sm">Manage your active login sessions</p>
-                  </div>
-                  <button className="px-6 py-3 border-2 border-red-500 text-red-500 rounded-xl font-semibold hover:bg-red-50 transition">
-                    View Sessions
-                  </button>
-                </div>
+                <button className="px-3 md:px-5 py-2.5 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition">
+                  View Sessions
+                </button>
               </div>
             </div>
           </div>
@@ -352,22 +324,17 @@ const ProfileSettings = () => {
 
         {/* Notifications Tab */}
         {activeTab === 'notifications' && (
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 shadow-xl border-2 border-green-200">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-2xl shadow-lg">
-                🔔
-              </div>
-              <h2 className="text-2xl font-bold text-gray-800">Notification Preferences</h2>
-            </div>
-
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h2 className="text-lg font-semibold text-gray-900 mb-6">Notification Preferences</h2>
+            
             <div className="space-y-4">
               {Object.entries(notifications).map(([key, value]) => (
-                <div key={key} className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-between">
+                <div key={key} className="flex items-center justify-between py-4 border-b border-gray-100 last:border-0">
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-1 capitalize">
+                    <h3 className="font-medium text-gray-900 mb-1 capitalize">
                       {key.replace(/([A-Z])/g, ' $1').trim()}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-sm text-gray-600">
                       {key === 'emailResults' && 'Receive test results via email'}
                       {key === 'smsReminders' && 'Get SMS reminders for appointments'}
                       {key === 'appointmentAlerts' && 'Notifications for upcoming appointments'}
@@ -377,13 +344,13 @@ const ProfileSettings = () => {
                   </div>
                   <button
                     onClick={() => handleNotificationToggle(key)}
-                    className={`relative inline-flex h-8 w-14 items-center rounded-full transition-colors ${
-                      value ? 'bg-gradient-to-r from-green-500 to-emerald-500' : 'bg-gray-300'
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      value ? 'bg-[#407BFF]' : 'bg-gray-300'
                     }`}
                   >
                     <span
-                      className={`inline-block h-6 w-6 transform rounded-full bg-white shadow-lg transition-transform ${
-                        value ? 'translate-x-7' : 'translate-x-1'
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        value ? 'translate-x-6' : 'translate-x-1'
                       }`}
                     />
                   </button>
