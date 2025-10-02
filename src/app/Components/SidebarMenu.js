@@ -90,12 +90,12 @@ const SidebarMenu = () => {
                     {/* Exist */}
                      <div className='flex flex-row gap-2 w-[93px] h-[32px] ml-1'>
                         <Image
-                         src="/Logout.svg"
+                         src="/Exist icon.svg"
                          alt="Logo"
                          width={19}
                          height={19}
                          />
-                         <Link href="/" className='text-[16px] text-[#D61F1F] mt-1.5'>Exist</Link>
+                         <Link href="/" className='text-[16px] w-[19px] h-[19px] text-[#D61F1F] mt-1.5'>Exist</Link>
                       </div>
                   </div>
           </div>

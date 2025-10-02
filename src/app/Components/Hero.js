@@ -11,7 +11,7 @@ const Hero = () => {
         <div className='flex flex-col-reverse md:flex-row w-full md:w-[1350px] h-[770px] md:h-[780px] mx-auto
          mt-0 px-3 md:px-15 overflow-hidden'>
             {/* left item */}
-            <div className='flex flex-col w-[395px] md:w-[637px] h-[435px] md:h-[520px] mt-4 md:mt-20 px-2 md:px-0 items-start'>
+            <div className='flex flex-col w-[395px] md:w-[637px] h-[435px] md:h-[520px] mt-12 md:mt-20 px-2 md:px-0 items-start'>
                 <AnimateOnScroll direction="up" delay={0}>
                 <h4 className='text-[16px] md:text-[20px] font-semibold text-[#888888]'>Introducing All New Lab Test Facility</h4>
                 </AnimateOnScroll>
@@ -74,9 +74,12 @@ const Hero = () => {
                     className='flex md:hidden w-[35px] h-[40px] absolute bottom-[-20px] left-[22rem] z-10'
                     />
                     <p className=' w-[192px] h-auto md:w-[139px] md:h-[71px] text-[#151516]  text-[12px] md:text-[14px] 
-                    absolute bottom-[-4rem] md:bottom-[-7.5rem] left-7 md:left-20'>Stop waiting long queue Book online Appointment Now</p>
-                    <p className='w-[129px] h-auto md:w-[100px] md:h-[71px] text-end md:text-start text-[#407BFF]  text-[12px] md:text-[14px] absolute 
-                    bottom-[-3rem] md:bottom-[-6rem] left-[15rem] md:left-[27rem]'>To learn More About ProMed Lab Click here</p>
+                    absolute bottom-[-4rem] md:bottom-[-7.5rem] left-7 md:left-20'>
+                      Stop waiting long queue Book online Appointment Now</p>
+                    <p className='w-[129px] h-auto md:w-[100px] md:h-[71px] text-end md:text-start 
+                    text-[#407BFF]  text-[12px] md:text-[14px] absolute 
+                    bottom-[-3rem] md:bottom-[-6rem] left-[15rem] md:left-[27rem]'>
+                      To learn More About ProMed Lab Click here</p>
 
                     {/* vectors */}
                     <Image
@@ -84,14 +87,16 @@ const Hero = () => {
                     alt='Vector'
                     width={24}
                     height={24}
-                    className=' w-[11px] h-[11px] md:w-[24px] md:h-[24px] absolute bottom-[-2.3rem] md:bottom-[-4.2rem] left-4 md:left-[3.5rem] z-10'
+                    className=' w-[11px] h-[11px] md:w-[24px] md:h-[24px] absolute bottom-[-2.3rem]
+                     md:bottom-[-4.2rem] left-4 md:left-[3.5rem] z-10'
                     />
                     <Image  
                     src='/Vector (10).svg'
                     alt='Vector'
                     width={18}
                     height={18}
-                    className='w-[9px] h-[9px] md:w-[18px] md:h-[18px] absolute bottom-[-18px] md:bottom-[-35px] left-[15.8rem]  md:left-[26rem] z-10'
+                    className='w-[9px] h-[9px] md:w-[18px] md:h-[18px] absolute bottom-[-18px] 
+                    md:bottom-[-35px] left-[15.8rem]  md:left-[26rem] z-10'
                     />
                  </div>
                  </AnimateOnScroll>
