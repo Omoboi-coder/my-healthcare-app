@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const DashboardLayout = ({ children }) => {
   return (
-     <section className='bg-[#F5F8FF]'>
+     <section className='bg-[#F5F8FF] '>
             {/* Mobile navbar - only shows on small screens */}
       <nav className='md:hidden flex '>
         <div className='flex w-full h-[92px] items-center mx-auto px-4 pt-4'>
@@ -33,13 +33,11 @@ const DashboardLayout = ({ children }) => {
                 hover:bg-blue-500 hover:text-white'>Contact Us</button>
                 </Link>
                 </div>   
-       
-          
         </div>
       </nav>
 
       {/* Main content area */}
-      <div className='flex flex-col mx-auto gap-0 w-full min-h-screen md:w-[84.4rem] md:h-[985px] bg-[#F5F8FF]'>
+      <div className='flex flex-col mx-auto gap-0 w-full min-h-screen md:w-[84.4rem] md:h-auto bg-[#F5F8FF]'>
         
         {/* TopCon - only shows on desktop */}
         <div className='md:block hidden'>

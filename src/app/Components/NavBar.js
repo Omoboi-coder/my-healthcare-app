@@ -1,8 +1,12 @@
-import React from 'react'
+'use client'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link' 
 
 const NavBar = () => {
+
+  const [activeLink, setActiveLink] = useState('#hero');
+
   return (
   <section id='navbar' className='bg-white shadow-lg'>
     <nav className='flex flex-row w-full md:w-[1350px] h-[92px] mx-auto
@@ -16,15 +20,52 @@ const NavBar = () => {
         height={45}
         /> 
         </div>
+
         {/* Navigation Links */}
-        <div className='hidden md:flex flex-row md:w-[452px] h-[24px] gap-8 text-[20px] ml-8 
-              font-medium text-[#888888]'>
-            <Link href='#hero' className='hover:text-blue-500 transition duration-300'>Home</Link>
-            <Link href='#package' className='hover:text-blue-500 transition duration-300'>Services</Link>
-            <Link href='#chooseus' className='hover:text-blue-500 transition duration-300'>Team</Link>
-            <Link href='#footer' className='hover:text-blue-500 transition duration-300'>Events</Link>
-            <Link href='#footer' className='hover:text-blue-500 transition duration-300'>About Us</Link>
-        </div>
+      <div className='hidden md:flex flex-row md:w-[452px] h-[24px] gap-8 text-[20px] ml-8 
+      font-medium text-[#888888]'>
+    <Link 
+        href='#hero' 
+        onClick={() => setActiveLink('#hero')}
+        className={`relative transition duration-300 group ${activeLink === '#hero' ? 'text-blue-500' : 'hover:text-blue-500'}`}
+    >
+        Home
+        <span className='absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full'></span>
+    </Link>
+    <Link 
+        href='#package' 
+        onClick={() => setActiveLink('#package')}
+        className={`relative transition duration-300 group ${activeLink === '#package' ? 'text-blue-500' : 'hover:text-blue-500'}`}
+    >
+        Services
+        <span className='absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full'></span>
+    </Link>
+    <Link 
+        href='#chooseus' 
+        onClick={() => setActiveLink('#chooseus')}
+        className={`relative transition duration-300 group ${activeLink === '#chooseus' ? 'text-blue-500' : 'hover:text-blue-500'}`}
+    >
+        Team
+        <span className='absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full'></span>
+    </Link>
+    <Link 
+        href='#footer' 
+        onClick={() => setActiveLink('#footer')}
+        className={`relative transition duration-300 group ${activeLink === '#footer' ? 'text-blue-500' : 'hover:text-blue-500'}`}
+    >
+        Events
+        <span className='absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full'></span>
+    </Link>
+    <Link 
+        href='#footer' 
+        onClick={() => setActiveLink('#footer-about')}
+        className={`relative transition duration-300 group ${activeLink === '#footer-about' ? 'text-blue-500' : 'hover:text-blue-500'}`}
+    >
+        About Us
+        <span className='absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full'></span>
+    </Link>
+</div>
+        
         
         {/* Action Buttons */}
         <div className='hidden md:flex flex-row gap-4'>

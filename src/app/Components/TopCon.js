@@ -17,6 +17,7 @@ const TopCon = () => {
                   />
                   </Link>
                   <div className='flex flex-row w-[550px] h-auto mt-5 p-[4px] space-x-5'>
+                     <Link href="/home">
                       {/* Home */}
                          <div className='flex flex-row gap-2 w-[70px] h-[32px]'>
                         <Image
@@ -25,20 +26,24 @@ const TopCon = () => {
                          width={19}
                          height={19}
                          />
-                         <Link href="/home" className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Home</Link>
+                          <span className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Home </span>
                       </div>
+                      </Link>
+                       <Link href="/bookings">
                       {/* Booking */}
                          <div className='flex flex-row gap-2 w-[100px] h-[32px]'>
                         <Image
-                         src="/Appointment icon.svg"
+                         src="/Booking.svg"
                          alt="Logo"
                          width={19}
                          height={19}
                          />
-                         <Link href="/bookings" className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Bookings</Link>
+                         <span className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Bookings</span>
                       </div>
+                      </Link>
 
                       {/* Appointment */}
+                      <Link href="/appointment">
                       <div className='flex flex-row gap-3 w-[120px] h-[32px]'>
                         <Image
                          src="/Appointment icon.svg"
@@ -47,8 +52,10 @@ const TopCon = () => {
                          height={19}
                          
                          />
-                         <Link href="/appointment" className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Appointment</Link>
+                          <span className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Appointment </span>  
                       </div>
+                      </Link>
+                      <Link href="/result">
                       {/* Test Results */}
                       <div className='flex flex-row gap-2 w-[110px] h-[32px]'>
                         <Image
@@ -57,18 +64,22 @@ const TopCon = () => {
                          width={19}
                          height={19}
                          />
-                         <Link href="/result" className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Test Result</Link>
+                         <span className='text-[16px] text-[#343434] mt-1.5 cursor-pointer'>Test Result </span>
                       </div>
+                      </Link>
+                      
+                        <Link href="/">
                        {/* Exist */}
                      <div className='flex flex-row gap-2 w-[70px] h-[32px] ml-1'>
                         <Image
-                         src="/Logout.svg"
+                         src="/Exist icon.svg"
                          alt="Logo"
                          width={19}
                          height={19}
                          />
-                         <Link href="/" className='text-[16px] text-[#D61F1F] mt-1.5'>Exist</Link>
+                         <span className='text-[16px] text-[#D61F1F] mt-1.5'>Exist </span>
                       </div>
+                      </Link>
                     </div>
             </div>
         </>

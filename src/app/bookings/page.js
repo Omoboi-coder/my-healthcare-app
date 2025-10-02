@@ -12,7 +12,7 @@ const BookingForm = () => {
     testPackage: '',
     concerns: '',
     preferredDate: '',
-    preferredTime: ''
+    preferredTime: '',
   });
 
   const testPackages = [  
@@ -69,8 +69,9 @@ const BookingForm = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition"
-                  placeholder="John Doe"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] 
+                   text-[#666363] placeholder:text-[#666363] focus:border-transparent outline-none transition"
+                  placeholder="Omor Kenny"
                 />
               </div>
 
@@ -81,8 +82,9 @@ const BookingForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition"
-                  placeholder="john@example.com"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF]
+                   text-[#666363] placeholder:text-[#666363] focus:border-transparent outline-none transition"
+                  placeholder="kenny@example.com"
                 />
               </div>
 
@@ -93,8 +95,9 @@ const BookingForm = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition"
-                  placeholder="+234 XXX XXX XXXX"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF]
+                   text-[#666363] placeholder:text-[#666363] focus:border-transparent outline-none transition"
+                  placeholder="+999 XXX XXX XXXX"
                 />
               </div>
 
@@ -105,7 +108,8 @@ const BookingForm = () => {
                   name="age"
                   value={formData.age}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF]
+                   text-[#666363] placeholder:text-[#666363] focus:border-transparent outline-none transition"
                   placeholder="25"
                   min="1"
                   max="120"
@@ -136,7 +140,8 @@ const BookingForm = () => {
           {/* Test Package Selection */}
           <div className="border-b border-gray-200 pb-6">
             <h2 className="text-xl font-semibold text-[#151516] mb-4 flex items-center gap-2">
-              <span className="w-8 h-8 bg-[#407BFF] text-white rounded-full flex items-center justify-center text-sm">2</span>
+              <span className="w-8 h-8 bg-[#407BFF] text-white rounded-full flex items-center 
+              justify-center text-sm">2</span>
               Select Test Package
             </h2>
             
@@ -181,7 +186,8 @@ const BookingForm = () => {
           {/* Medical Concerns */}
           <div className="border-b border-gray-200 pb-6">
             <h2 className="text-xl font-semibold text-[#151516] mb-4 flex items-center gap-2">
-              <span className="w-8 h-8 bg-[#407BFF] text-white rounded-full flex items-center justify-center text-sm">3</span>
+              <span className="w-8 h-8 bg-[#407BFF] text-white rounded-full flex items-center
+               justify-center text-sm">3</span>
               Medical Concerns
             </h2>
             
@@ -194,7 +200,8 @@ const BookingForm = () => {
                 value={formData.concerns}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition resize-none"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF]
+                 text-[#666363] placeholder:text-[#666363] focus:border-transparent outline-none transition resize-none"
                 placeholder="Please describe any symptoms or health concerns you'd like to address..."
               />
             </div>
@@ -216,7 +223,8 @@ const BookingForm = () => {
                   value={formData.preferredDate}
                   onChange={handleChange}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 
+                   text-[#666363] placeholder:text-[#666363] focus:ring-[#407BFF] focus:border-transparent outline-none transition"
                 />
               </div>
 
@@ -226,7 +234,8 @@ const BookingForm = () => {
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
+                   text-[#666363] placeholder:text-[#666363] focus:ring-[#407BFF] focus:border-transparent outline-none transition"
                 >
                   <option value="">Select time slot</option>
                   <option value="09:00 AM">09:00 AM</option>

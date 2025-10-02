@@ -15,13 +15,13 @@ const GetInTouch = () => {
             alt='Vector'
             width={50}
             height={50}
-            className='w-[29px] h-[29px] md:w-[50px] md:h-[50px] mx-auto '
+            className='w-[29px] h-[29px] md:w-[50px] md:h-[50px] mx-auto'
             />
-            <h2 className='text-[32px] md:text-[42px] text-center md:text-start text-[#151516]' >Get In Touch With Us</h2>
+            <h2 className='text-[32px] md:text-[42px] text-center md:text-start text-[#151516]'>Get In Touch With Us</h2>
             </div>
-
             {/* contact information div */}
-            <div className='flex flex-col md:flex-row w-[358px] min-h-[995px] md:w-[1196px] md:min-h-[667px] rounded-[8px]
+            <div className='flex flex-col md:flex-row w-[358px] min-h-[995px] md:w-[1196px]
+             md:min-h-[667px] rounded-[8px]
               mx-auto mt-5 md:mt-25 p-0 md:p-2 gap-6 md:gap-10 bg-white border border-gray-200 z-20 '>
                 {/* left item */}
                 <div className='flex flex-col w-[334px] h-[215px] md:w-[491px] mx-auto md:mx-0 
@@ -107,13 +107,14 @@ const GetInTouch = () => {
                   <div className='flex flex-col w-[282px] h-[700px] md:w-[618px] md:h-[484px] mt-0
                    md:mt-20 mx-auto md:mx-0'>
                     {/* con 1 */}
-                    <div className='grid grid-cols-1 md:grid-cols-2 w-[282px] h-[422px] md:w-[616px] md:h-[160px] gap-0 md:gap-4 '>
+                    <div className='grid grid-cols-1 md:grid-cols-2 w-[282px] h-[422px] md:w-[616px] md:h-[160px]
+                     text-[#151516] gap-0 md:gap-4 '>
                       {/* item 1 */}
                       <div className='flex flex-col w-[282px] h-[75px] space-y-2 text-[16px]'>
                         <h4>First Name</h4>
                         <input
                         type='text'
-                        placeholder='kenzzy'
+                        placeholder='kenny'
                         className='w-[282pxpx] h-[40px] p-2 text-[#666363] border border-gray-500 rounded-[8px] focus:outline-none'
                         />
                         </div>
@@ -123,7 +124,7 @@ const GetInTouch = () => {
                         <h4>Last Name</h4>
                         <input
                         type='text'
-                        placeholder='Omohar'
+                        placeholder='Omor'
                         className='w-[282px] h-[40px] p-2 text-[#666363] border border-gray-500 rounded-[8px] focus:outline-none'
                         />
                         </div>
@@ -150,11 +151,11 @@ const GetInTouch = () => {
                     </div>
                       {/* con 2 */}
                       <div className='flex flex-col w-[283px] h-[98px] md:w-[618px] md:h-[68px] mt-0 md:mt-6 gap-5'>
-                        <h4 className=' w-fit font-semibold text-[16px]'>Select Subject?</h4>
+                        <h4 className=' w-fit font-semibold text-[16px] text-[#011C2A]'>Select Subject?</h4>
                         {/* inner con */}
                         <div className='flex flex-wrap md:flex-row w-[283px] h-[60px] md:w-[618px] md:h-[20px] gap-2 md:gap-11'>
                           {/* item 1 */}
-                          <div className='flex flex-row w-[139px] gap-2 text-[16px]'>
+                          <div className='flex flex-row w-[139px] gap-2 text-[16px] text-[#011C2A]'>
                           <Image
                           src='/blue tick.svg'
                           alt='blue tick'
@@ -165,7 +166,7 @@ const GetInTouch = () => {
                           </div>
 
                           {/* item 2 */}
-                          <div className='flex flex-row w-[131px] h-[20px] gap-2 text-[16px]'>
+                          <div className='flex flex-row w-[131px] h-[20px] gap-2 text-[16px] text-[#011C2A]'>
                           <Image
                           src='/gray tick.svg'
                           alt='gray tick'
@@ -176,7 +177,7 @@ const GetInTouch = () => {
                           </div>
 
                           {/* item 3 */}
-                          <div className='flex flex-row w-[139px] h-[20px] gap-2 text-[16px]'>
+                          <div className='flex flex-row w-[139px] h-[20px] gap-2 text-[16px] text-[#011C2A]'>
                           <Image
                           src='/gray tick.svg'
                           alt='gray tick'
@@ -187,10 +188,10 @@ const GetInTouch = () => {
                           </div>
 
                           {/* item 4 */}
-                          <div className='flex flex-row w-[74px] h-[20px] gap-2 text-[16px]'>
+                          <div className='flex flex-row w-[74px] h-[20px] gap-2 text-[16px] text-[#011C2A]'>
                           <Image
                           src='/gray tick.svg'
-                          alt='blue tick'
+                          alt='gray tick'
                           width={18}
                           height={18}
                           />
@@ -201,10 +202,10 @@ const GetInTouch = () => {
                       </div>
                       {/* con 3 */}
                       <div className='flex flex-col w-[282px] h-[120px] md:w-[615px] md:h-[120px] mt-6 md:mt-10 gap-4 md:gap-2'>
-                        <h4 className='font-semibold text-[16px]'>Message</h4>
+                        <h4 className='font-semibold text-[16px] text-[#151516]'>Message</h4>
                         <textarea
                         placeholder='Write your message..'
-                        className='w-full h-[90px] p-2 border border-gray-500 rounded-[8px] focus:outline-none'
+                        className='w-full h-[90px] p-2 placeholder:text-[#666363] text-[#666363] border border-gray-500 rounded-[8px] focus:outline-none'
                         />
                       </div>
                       <button className='w-[199px] min-h-[48px] bg-[#407BFF] rounded-[8px] cursor-pointer text-white mx-auto py-3 mt-4 md:mt-6'>

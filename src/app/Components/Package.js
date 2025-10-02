@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { AnimateOnScroll } from './AnimateOnScroll'
 
 const Package = () => {
   return (
@@ -9,6 +11,7 @@ const Package = () => {
         <div className='flex flex-col w-full h-[1615px] md:w-[1350px] md:h-[702px] mx-auto px-5 min-[430px]:px-7 
         min-[414px]:px-5 md:px-15 relative overflow-visible'>
 
+            <AnimateOnScroll direction="up" delay={0}>
             <div className='flex flex-col w-[215px] h-[110px] md:w-[291px] md:h-[80px] space-y-8 mx-auto mt-4'>
             {/* heading */}
              <Image  
@@ -20,11 +23,14 @@ const Package = () => {
             />
             <h2 className='text-[32px] md:text-[42px] text-[#151516]' >Test Packages</h2>
             </div>
+            </AnimateOnScroll>
+
             {/* Cards container */}
             <div className='flex flex-col md:flex-row w-full h-[1655px] md:w-[1217px] md:h-[484px]
              gap-[30px] md:gap-[50px] mt-10 md:mt-25 z-20'>
                 
                 {/* card 1 */}
+                <AnimateOnScroll direction="up" delay={0.1}>
                  <div className='flex flex-col w-[372px] h-[443px] bg-white border
                   border-gray-200 mt-0 md:mt-10 gap-5 rounded-[12px] px-5 relative'>
                 {/* Tag */}
@@ -42,13 +48,13 @@ const Package = () => {
                 
               </div>
               <div className='w-[310px] h-[82px] font-semibold space-y-2 '>
-                <h3 className='text-[19px]'>Full Body Checkup- Essential</h3>
+                <h3 className='text-[19px] text-[#151516]'>Full Body Checkup- Essential</h3>
                 <p className='text-[14px] text-[#666363]'>8 Tests - Complete Blood Count With ESR, 
                     Liver Test, Blood - Sugar & 5 Others.</p>
 
               </div>
               <span className=' w-[336px] h-0 border border-gray-200 mx-auto'></span>
-                <div className=' flex flex-col w-[215px] h-[140px] text-[16px] gap-8'>
+                <div className=' flex flex-col w-[215px] h-[140px] text-[16px] text-[#666363] gap-8'>
                     <div className='flex flex-row gap-2'>
                     <Image
                     src='/Icon.svg'
@@ -91,7 +97,10 @@ const Package = () => {
                     />
                     </button>
                  </div>
+                 </AnimateOnScroll>
+
                 {/* card 2*/}
+                <AnimateOnScroll direction="up" delay={0.2}>
                  <div className='flex flex-col w-[372px] h-[484px] bg-white border border-gray-200 
                   gap-5 rounded-[12px] relative'>
                     <div className='flex flex-row w-[372px] min-h-[48px] bg-[#407BFF] text-white
@@ -121,12 +130,12 @@ const Package = () => {
                 
               </div>
               <div className='w-[340px] h-[82px] font-semibold space-y-2 '>
-                <h3 className='w-[340px] text-[19px]'>Full Body Checkup - Comprehensive</h3>
+                <h3 className='w-[340px] text-[19px] text-[#151516]'>Full Body Checkup - Comprehensive</h3>
                 <p className='w-[310px] text-[14px] text-[#666363]'>28 Tests - Complete Blood Count With ESR, Liver Test , Blood - Sugar & 25 Others.</p>
 
               </div>
               <span className=' w-[336px] h-0 border border-gray-200 mx-auto'></span>
-                <div className=' flex flex-col w-[215px] h-[140px] text-[16px] gap-8'>
+                <div className=' flex flex-col w-[215px] h-[140px] text-[16px] text-[#666363] gap-8'>
                     <div className='flex flex-row gap-2'>
                     <Image
                     src='/Icon.svg'
@@ -172,8 +181,10 @@ const Package = () => {
 										</Link>
                     </div>
                  </div>
+                 </AnimateOnScroll>
 
                 {/* card 3 */}
+                <AnimateOnScroll direction="up" delay={0.3}>
                  <div className='flex flex-col w-[372px] h-[443px] bg-white border
                   border-gray-200 mt-0 md:mt-10 gap-5 rounded-[12px] px-5 relative'>
                     {/* Tag */}
@@ -191,13 +202,13 @@ const Package = () => {
                 
               </div>
               <div className='w-[310px] h-[82px] font-semibold space-y-2 '>
-                <h3 className='text-[19px]'>Full Body Checkup - Advanced</h3>
+                <h3 className='text-[19px] text-[#151516]'>Full Body Checkup - Advanced</h3>
                 <p className='text-[14px] text-[#666363]'>8 Tests - Complete Blood Count With ESR, 
                   Liver Test, Blood - Sugar & 5 Others.</p>
 
               </div>
               <span className=' w-[336px] h-0 border border-gray-200 mx-auto'></span>
-                <div className=' flex flex-col w-[215px] h-[140px] text-[16px] gap-8'>
+                <div className=' flex flex-col w-[215px] h-[140px] text-[16px] text-[#666363] gap-8'>
                     <div className='flex flex-row gap-2'>
                     <Image
                     src='/Icon.svg'
@@ -239,11 +250,12 @@ const Package = () => {
                     />
                     </button>
                  </div>
+                 </AnimateOnScroll>
 
             </div>
               {/* Background overlays remain the same */}
                 <div 
-                className="absolute bottom-[-6rem] md:bottom-[-7rem] left-[-5rem] md:left-[-5.5rem] 2xl:left-[]
+                className="absolute bottom-[-6rem] md:bottom-[-7rem] left-[-5rem] md:left-[-6rem] 2xl:left-[]
                 z-0 opacity-100 w-[253px] h-[253px] md:w-[308px] md:h-[308px]"
                 style={{
                 backgroundImage: "url('/Clip path.svg')",

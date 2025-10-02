@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link  from 'next/link'
+import { AnimateOnScroll } from './AnimateOnScroll'
 
 const Hero = () => {
   return (
@@ -10,10 +12,17 @@ const Hero = () => {
          mt-0 px-3 md:px-15 overflow-hidden'>
             {/* left item */}
             <div className='flex flex-col w-[395px] md:w-[637px] h-[435px] md:h-[520px] mt-4 md:mt-20 px-2 md:px-0 items-start'>
+                <AnimateOnScroll direction="up" delay={0}>
                 <h4 className='text-[16px] md:text-[20px] font-semibold text-[#888888]'>Introducing All New Lab Test Facility</h4>
+                </AnimateOnScroll>
+
+                <AnimateOnScroll direction="up" delay={0.2}>
                 <h1 className='text-[35px] md:text-[55px] font-bold text-[#151516] mt-2 leading-tight'>Discover 
                     Accurate Diagnostics & Reliable <span className='text-[#407BFF]'>Testing Services.</span></h1>
+                </AnimateOnScroll>
+
                  {/* button */}
+                 <AnimateOnScroll direction="up" delay={0.4}>
                  <div className='flex flex-row relative w-[350px] h-[48px] md:w-fit md:h-fit mt-6 md:mt-10
                   gap-5'>
                   <Link href="/bookings">
@@ -85,8 +94,10 @@ const Hero = () => {
                     className='w-[9px] h-[9px] md:w-[18px] md:h-[18px] absolute bottom-[-18px] md:bottom-[-35px] left-[15.8rem]  md:left-[26rem] z-10'
                     />
                  </div>
+                 </AnimateOnScroll>
             </div>
             {/* right item */}
+            <AnimateOnScroll direction="right" delay={0.3}>
             <div className='w-[390px] h-[417px] md:min-w-[581px] md:h-[600px] relative'>
             <Image
             src='/Hero Image.svg'
@@ -119,7 +130,7 @@ const Hero = () => {
             alt='Vector'
             width={42}
             height={42}
-            className='absolute top-17 md:top-23 left-2 md:left-3 w-[23px] h-[23px] md:w-[42px] md:h-[42px]'
+            className='absolute top-17 md:top-34 left-2 md:left-3 w-[23px] h-[23px] md:w-[42px] md:h-[42px]'
             />
 
             <Image
@@ -127,10 +138,11 @@ const Hero = () => {
             alt='Vector'
             width={65}
             height={65}
-            className='absolute top-10 left-7 w-[36px] h-[36px] md:w-[62px] md:h-[62px]'
+            className='absolute top-20 left-7 md:left-8 w-[36px] h-[36px] md:w-[62px] md:h-[62px]'
             />
 
             </div>
+            </AnimateOnScroll>
              <Image
             src='/Frame 31.svg'
             alt='Frame'

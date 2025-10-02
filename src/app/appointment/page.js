@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import DashboardLayout from '../Components/DashboardLayout';
 import Link from 'next/link';
+import DashboardLayout from '../Components/DashboardLayout';
+
 const MyAppointments = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
 
@@ -85,8 +86,9 @@ const MyAppointments = () => {
 
   return (
     <DashboardLayout>
-    <div className="w-full min-h-screen bg-gradient-to-br from-[#F5F8FF] to-white p-4 md:p-6">
-      <div className="max-w-6xl mx-auto">    
+    <div className="w-full min-h-screen bg-gray-50 p-4 md:p-6">
+      <div className="max-w-6xl mx-auto">
+        
         {/* Header */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-2">
@@ -128,14 +130,14 @@ const MyAppointments = () => {
 
         {/* Appointments List */}
         {appointments.length === 0 ? (
-          <div className="bg-white rounded-2xl shadow-lg p-12 text-center">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-12 text-center">
             <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
             </div>
             <h3 className="text-xl font-semibold text-[#151516] mb-2">No Appointments Found</h3>
-            <p className="text-gray-600 mb-6">You don &#39 t have any {activeTab} appointments yet.</p>
+            <p className="text-gray-600 mb-6">You don&apos;t have any {activeTab} appointments yet.</p>
             <button className="px-6 py-3 bg-[#407BFF] text-white rounded-lg font-semibold hover:bg-[#3366DD] transition">
               Book New Appointment
             </button>
@@ -143,91 +145,115 @@ const MyAppointments = () => {
         ) : (
           <div className="space-y-4">
             {appointments.map((appointment) => (
-              <div key={appointment.id} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div key={appointment.id} className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
                 
-                {/* Top Section */}
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-bold text-[#151516]">{appointment.testName}</h3>
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(appointment.status)}`}>
+                <div className="p-6">
+                  {/* Header Section */}
+                  <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-100">
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">{appointment.testName}</h3>
+                      <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(appointment.status)}`}>
                         {appointment.status}
                       </span>
                     </div>
-                    <p className="text-gray-600 text-sm mb-1">with {appointment.doctor}</p>
-                    <p className="text-gray-500 text-sm">{appointment.location}</p>
+                    <div className="text-right">
+                      <p className="text-xs text-gray-500 mb-1">Total Cost</p>
+                      <p className="text-2xl font-bold text-[#407BFF]">{appointment.price}</p>
+                    </div>
                   </div>
-                  
-                  <div className="text-right">
-                    <p className="text-3xl font-bold text-[#407BFF]">{appointment.price}</p>
-                  </div>
-                </div>
 
-                {/* Date & Time Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 p-4 bg-[#F5F8FF] rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-[#407BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500">Date</p>
-                      <p className="font-semibold text-[#151516]">{formatDate(appointment.date)}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                      <svg className="w-5 h-5 text-[#407BFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500">Time</p>
-                      <p className="font-semibold text-[#151516]">{appointment.time}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-wrap gap-3">
-                  {activeTab === 'upcoming' ? (
-                    <>
-                      <button 
-                        onClick={() => handleReschedule(appointment.id)}
-                        className="flex-1 min-w-[140px] px-4 py-3 bg-[#407BFF] text-white rounded-lg font-semibold hover:bg-[#3366DD] transition flex items-center justify-center gap-2"
-                      >
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  {/* Info Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    {/* Doctor Info */}
+                    <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        Reschedule
-                      </button>
-                      <button 
-                        onClick={() => handleCancel(appointment.id)}
-                        className="flex-1 min-w-[140px] px-4 py-3 border-2 border-red-500 text-red-500 rounded-lg font-semibold hover:bg-red-50 transition"
-                      >
-                        Cancel
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      {appointment.reportReady && (
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500">Doctor</p>
+                        <p className="font-semibold text-gray-900 text-sm">{appointment.doctor}</p>
+                      </div>
+                    </div>
+
+                    {/* Location Info */}
+                    <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500">Location</p>
+                        <p className="font-semibold text-gray-900 text-sm">{appointment.location}</p>
+                      </div>
+                    </div>
+
+                    {/* Date Info */}
+                    <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500">Date</p>
+                        <p className="font-semibold text-gray-900 text-sm">{formatDate(appointment.date)}</p>
+                      </div>
+                    </div>
+
+                    {/* Time Info */}
+                    <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-3">
+                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500">Time</p>
+                        <p className="font-semibold text-gray-900 text-sm">{appointment.time}</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-3 pt-4 border-t border-gray-100">
+                    {activeTab === 'upcoming' ? (
+                      <>
                         <button 
-                          onClick={() => handleDownloadReport(appointment.id)}
-                          className="flex-1 min-w-[140px] px-4 py-3 bg-[#407BFF] text-white rounded-lg font-semibold hover:bg-[#3366DD] transition flex items-center justify-center gap-2"
+                          onClick={() => handleReschedule(appointment.id)}
+                          className="flex-1 px-4 py-2.5 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition"
                         >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                          </svg>
-                          Download Report
+                          Reschedule
                         </button>
-                      )}
-                      <button className="flex-1 min-w-[140px] px-4 py-3 border-2 border-[#407BFF] text-[#407BFF] rounded-lg font-semibold hover:bg-[#F5F8FF] transition">
-                        Book Again
-                      </button>
-                    </>
-                  )}
+                        <button 
+                          onClick={() => handleCancel(appointment.id)}
+                          className="flex-1 px-4 py-2.5 border border-red-500 text-red-500 text-sm font-medium rounded-lg hover:bg-red-50 transition"
+                        >
+                          Cancel
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        {appointment.reportReady && (
+                          <button 
+                            onClick={() => handleDownloadReport(appointment.id)}
+                            className="flex-1 px-4 py-2.5 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition flex items-center justify-center gap-2"
+                          >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Download Report
+                          </button>
+                        )}
+                        <button className="flex-1 px-4 py-2.5 border border-[#407BFF] text-[#407BFF] text-sm font-medium rounded-lg hover:bg-blue-50 transition">
+                          Book Again
+                        </button>
+                      </>
+                    )}
+                  </div>
                 </div>
 
               </div>
