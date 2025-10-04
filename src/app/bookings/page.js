@@ -166,7 +166,7 @@ const BookingForm = () => {
                   
                   <div className="flex items-center justify-between pr-8">
                     <div>
-                      <div className="flex items-center gap-2 mb-1">
+                      <div className="flex items-start md:items-center gap-2 mb-1">
                         <h3 className="font-semibold text-[#151516]">{pkg.name}</h3>
                         {pkg.recommended && (
                           <span className="px-2 py-1 bg-[#407BFF] text-white text-xs rounded-full">RECOMMENDED</span>
@@ -207,7 +207,7 @@ const BookingForm = () => {
             </div>
           </div>
 
-          {/* Preferred Date & Time */}
+         {/* Preferred Date & Time */}
           <div className="pb-6">
             <h2 className="text-xl font-semibold text-[#151516] mb-4 flex items-center gap-2">
               <span className="w-8 h-8 bg-[#407BFF] text-white rounded-full flex items-center justify-center text-sm">4</span>
@@ -215,26 +215,26 @@ const BookingForm = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
+              <div className="w-full">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Date *</label>
                 <input
                   type="date"
                   name="preferredDate"
+                  value={formData.preferredDate}
                   onChange={handleChange}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 
-                   text-[#666363] placeholder:text-[#666363] focus:ring-[#407BFF] focus:border-transparent outline-none transition"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition text-[#666363] box-border h-[50px]"
                 />
               </div>
 
-              <div>
+              <div className="w-full">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Time *</label>
                 <select
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2
-                   text-[#666363] placeholder:text-[#666363] focus:ring-[#407BFF] focus:border-transparent outline-none transition"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition text-[#666363] box-border appearance-none h-[50px]"
+                  style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em" }}
                 >
                   <option value="">Select time slot</option>
                   <option value="09:00 AM">09:00 AM</option>
