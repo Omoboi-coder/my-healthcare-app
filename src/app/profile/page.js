@@ -132,152 +132,153 @@ const ProfileSettings = () => {
             Notifications
           </button>
         </div>
+            {/* Personal Info Tab */}
+{activeTab === 'personal' && (
+  <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6">
+    <h2 className="text-lg font-semibold text-gray-900 mb-6">Personal Information</h2>
 
-        {/* Personal Info Tab */}
-        {activeTab === 'personal' && (
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-6">Personal Information</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+        <input
+          type="text"
+          name="fullName"
+          value={profileData.fullName}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                <input
-                  type="text"
-                  name="fullName"
-                  value={profileData.fullName}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+        <input
+          type="email"
+          name="email"
+          value={profileData.email}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={profileData.email}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+        <input
+          type="tel"
+          name="phone"
+          value={profileData.phone}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={profileData.phone}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
+        <input
+          type="date"
+          name="dateOfBirth"
+          value={profileData.dateOfBirth}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
-                <input
-                  type="date"
-                  name="dateOfBirth"
-                  value={profileData.dateOfBirth}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Gender</label>
+        <select
+          name="gender"
+          value={profileData.gender}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border appearance-none"
+          style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em" }}
+        >
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Gender</label>
-                <select
-                  name="gender"
-                  value={profileData.gender}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                >
-                  <option>Male</option>
-                  <option>Female</option>
-                  <option>Other</option>
-                </select>
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Blood Group</label>
+        <select
+          name="bloodGroup"
+          value={profileData.bloodGroup}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border appearance-none"
+          style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em" }}
+        >
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>O+</option>
+          <option>O-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+        </select>
+      </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Blood Group</label>
-                <select
-                  name="bloodGroup"
-                  value={profileData.bloodGroup}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                >
-                  <option>A+</option>
-                  <option>A-</option>
-                  <option>B+</option>
-                  <option>B-</option>
-                  <option>O+</option>
-                  <option>O-</option>
-                  <option>AB+</option>
-                  <option>AB-</option>
-                </select>
-              </div>
+      <div className="w-full md:col-span-2">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
+        <input
+          type="text"
+          name="address"
+          value={profileData.address}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
 
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Address</label>
-                <input
-                  type="text"
-                  name="address"
-                  value={profileData.address}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Emergency Contact Name</label>
+        <input
+          type="text"
+          name="emergencyName"
+          value={profileData.emergencyName}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Emergency Contact Name</label>
-                <input
-                  type="text"
-                  name="emergencyName"
-                  value={profileData.emergencyName}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
+      <div className="w-full">
+        <label className="block text-sm font-medium text-gray-700 mb-2">Emergency Contact Number</label>
+        <input
+          type="tel"
+          name="emergencyContact"
+          value={profileData.emergencyContact}
+          onChange={handleInputChange}
+          disabled={!isEditing}
+          className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
+        />
+      </div>
+    </div>
 
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Emergency Contact Number</label>
-                <input
-                  type="tel"
-                  name="emergencyContact"
-                  value={profileData.emergencyContact}
-                  onChange={handleInputChange}
-                  disabled={!isEditing}
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500"
-                />
-              </div>
-            </div>
-
-            {isEditing && (
-              <div className="flex gap-3 mt-6 pt-6 border-t border-gray-200">
-                <button
-                  onClick={handleSave}
-                  className="px-6 py-3 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition"
-                >
-                  Save Changes
-                </button>
-                <button
-                  onClick={() => setIsEditing(false)}
-                  className="px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition"
-                >
-                  Cancel
-                </button>
-              </div>
-            )}
-          </div>
-        )}
-
+    {isEditing && (
+      <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-gray-200">
+        <button
+          onClick={handleSave}
+          className="w-full sm:w-auto px-6 py-3 bg-[#407BFF] text-white text-sm font-medium rounded-lg hover:bg-[#3366DD] transition"
+        >
+          Save Changes
+        </button>
+        <button
+          onClick={() => setIsEditing(false)}
+          className="w-full sm:w-auto px-6 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition"
+        >
+          Cancel
+        </button>
+      </div>
+    )}
+  </div>
+)}
+       
         {/* Security Tab */}
         {activeTab === 'security' && (
           <div className="space-y-4">
