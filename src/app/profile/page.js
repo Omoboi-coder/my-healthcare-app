@@ -177,14 +177,16 @@ const ProfileSettings = () => {
       <div className="w-full">
         <label className="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
         <input
-          type="date"
+          type="text"
           name="dateOfBirth"
           value={profileData.dateOfBirth}
           onChange={handleInputChange}
           disabled={!isEditing}
+          placeholder="DD/MM/YYYY"
           className="w-full min-w-0 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition disabled:bg-gray-50 disabled:text-gray-500 box-border"
         />
       </div>
+
 
       <div className="w-full">
         <label className="block text-sm font-medium text-gray-700 mb-2">Gender</label>
