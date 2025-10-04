@@ -192,7 +192,7 @@ const BookingForm = () => {
             </h2>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-[17px] font-medium text-gray-700 mb-2">
                 What health concerns do you have? (Optional)
               </label>
               <textarea
@@ -220,10 +220,9 @@ const BookingForm = () => {
                 <input
                   type="date"
                   name="preferredDate"
-                  value={formData.preferredDate}
                   onChange={handleChange}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 
+                  className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 
                    text-[#666363] placeholder:text-[#666363] focus:ring-[#407BFF] focus:border-transparent outline-none transition"
                 />
               </div>
@@ -253,9 +252,8 @@ const BookingForm = () => {
           {/* Submit Button */}
           <div className="flex justify-center pt-4">
             <button
-              onClick={handleSubmit}
               className="w-full md:w-auto px-12 py-4 bg-[#407BFF] text-white text-lg font-bold rounded-lg 
-              hover:bg-[#3366DD] transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+              hover:bg-[#3366DD] transition duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer"
             >
               Book Appointment
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
