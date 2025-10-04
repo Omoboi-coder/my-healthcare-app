@@ -215,7 +215,7 @@ const BookingForm = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="w-full max-w-full overflow-hidden">
+              <div className="w-full">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Date *</label>
                 <input
                   type="text"
@@ -223,17 +223,17 @@ const BookingForm = () => {
                   value={formData.preferredDate}
                   onChange={handleChange}
                   placeholder="dd/mm/yyyy"
-                  className="w-full min-w-0 max-w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition text-[#666363] placeholder:text-[#666363] box-border"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition text-[#666363] placeholder:text-[#666363] box-border"
                 />
               </div>
 
-              <div className="w-full max-w-full overflow-hidden">
+              <div className="w-full">
                 <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Time *</label>
                 <select
                   name="preferredTime"
                   value={formData.preferredTime}
                   onChange={handleChange}
-                  className="w-full min-w-0 max-w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition text-[#666363] box-border appearance-none"
+                  className="w-full min-w-0 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#407BFF] focus:border-transparent outline-none transition text-[#666363] placeholder:text-[#666363] box-border appearance-none"
                   style={{ backgroundImage: "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e\")", backgroundPosition: "right 0.5rem center", backgroundRepeat: "no-repeat", backgroundSize: "1.5em 1.5em" }}
                 >
                   <option value="">Select time slot</option>
@@ -247,7 +247,7 @@ const BookingForm = () => {
                 </select>
               </div>
             </div>
-          </div> 
+          </div>
 
           {/* Submit Button */}
           <div className="flex justify-center pt-4">
